@@ -22,6 +22,36 @@ Copy the example env file and make the required configuration changes in the .en
 cp .env.example .env
 ```
 
+
+Update the .env file with Database credentials
+
+```bash 
+DB_CONNECTION=mysql
+DB_HOST=
+DB_PORT=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+```
+
+
+Change Broadcast Driver to Pusher
+
+```bash
+BROADCAST_DRIVER=pusher
+```
+
+
+Create a new Pusher application and update the .env file with the pusher credentials
+
+```bash
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=
+```
+
+
 Generate an app encryption key
 
 ```bash
@@ -40,6 +70,13 @@ Install the JavaScript dependencies
 npm install
 ```
 
+Run Websockets server
+
+```bash
+php artisan websockets:serve
+```
+
+
 Run the local development server
 
 ```bash
@@ -48,9 +85,11 @@ php artisan serve
 
 You can now access the server at http://localhost:8000
 
-### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Testing
+You can test the application by opening two different browsers and login with two different users. You can now send messages between the two users.
+
+Have fun!
 
 ### Credits
 
@@ -86,7 +125,6 @@ the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-### Credits
 
 ## Learning Laravel
 
@@ -102,12 +140,6 @@ into our comprehensive video library.
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in
 becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in
-the [Laravel documentation](https://laravel.com/docs/contributions).
 
 ## Code of Conduct
 
